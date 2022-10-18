@@ -1,0 +1,16 @@
+.Field {
+    display: block;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+h1 {
+    color: blue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
