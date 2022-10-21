@@ -11,13 +11,24 @@
 </head>
 
 <body>
+    <img id="field" src="field.svg" alt="VEX SpinUp Field" class="Field">
     <h1>VEX Spin Up Visualizer:</h1>
-    <p>omg so cool</p>
+        
+       <!-- The canvas tag -->
+    <canvas id="canvas" width=900 height=900 class="canvasField"></canvas><br>
+    <button onclick="resetCanvas()">Reset!</button>
+   
+    <!-- credit to Ethan (VRC team 5999x) for the svg file -->
+    <script>
+        window.onload = function() {
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext("2d");
+            let img = document.getElementById("field");
+            ctx.drawImage(img, 0, 0);
+        };
+        
+    </script>
 
-    <!--credit to Ethan for the svg file-->
-    <div>
-        <img id="field" src="field.svg" alt="VEX SpinUp Field" class="Field">
-    </div>
 
     <p>
         <span id="x-value"> </span>

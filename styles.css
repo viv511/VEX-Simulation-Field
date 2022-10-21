@@ -1,9 +1,12 @@
 .Field {
-    display: block;
-    margin: auto;
-    width: 60%;
-    padding: 10px;
+    display: none;
+    resize: none;
 }
+
+.canvasField {
+    resize: none;
+}
+
 
 h1 {
     color: blue;
