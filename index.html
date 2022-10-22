@@ -16,7 +16,7 @@
         
        <!-- The canvas tag -->
     <canvas id="canvas" width=900 height=900 class="canvasField"></canvas><br>
-    <button onclick="resetCanvas()">Reset!</button>
+    <button id = "reset" onclick="resetCanvas()">Reset!</button>
    
     <!-- credit to Ethan (VRC team 5999x) for the svg file -->
     <script>
@@ -29,11 +29,20 @@
         
     </script>
 
+   <p> Last X Coordinate: <span id="arrayX"> </span> </p>
+   <p> Last Y Coordinate: <span id="arrayY"> </span> </p>
+   <script>
+        // document.getElementById('arrayX').innerHTML = xValues[0];
+        // document.getElementById('arrayY').innerHTML = arr
+   </script>
+
 
     <p>
         <span id="x-value"> </span>
         <span id="y-value"> </span>
     </p>
+
+
 
 </body>
 </html>

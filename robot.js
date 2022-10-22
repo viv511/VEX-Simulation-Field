@@ -1,4 +1,8 @@
-let resetYet = true;
+// var xValues = [];
+// var yValues = [];
+var xValues = [];
+var yValues = [];
+
 
 window.addEventListener('mousemove', function (e) {
     document.getElementById('x-value').textContent = e.x;
@@ -15,12 +19,20 @@ window.addEventListener('mousedown', function(e) {
 
     //draw dot
     ctx.beginPath(); 
-    ctx.arc(x, y, pointSize, 0, Math.PI * 2, true); 
+    ctx.arc(x, y, pointSize, 0, Math.PI * 2, true);
     ctx.fill();
+    addPoint(x, y); 
 });
+
+function addPoint(xVal, yVal) {
+    xValues.push(Math.floor(xVal));
+    yValues.push(Math.floor(yVal));
+    document.getElementById('arrayX').innerHTML = xValues[xValues.length-1];
+    document.getElementById('arrayY').innerHTML = yValues[yValues.length-1];
+}
 
 function resetCanvas() {
     const context = canvas.getContext('2d');
     context.clearRect(0, 0, canvas.width, canvas.height);
-    resetYet = true;
 }
+
