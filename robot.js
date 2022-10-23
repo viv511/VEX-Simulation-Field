@@ -47,6 +47,8 @@ function addPoint(xVal, yVal) {
 
 function resetCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let img = document.getElementById("field");
+    ctx.drawImage(img, 0, 0);
     xValues = [];
     yValues = [];
 }
