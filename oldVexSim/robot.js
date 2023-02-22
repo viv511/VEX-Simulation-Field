@@ -60,6 +60,3 @@ function drawLines() {
     ctx.fill();
 }
 
-
-
-
