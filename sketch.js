@@ -9,13 +9,16 @@ let c;
 
 function preload() {
   resetButton = createButton("Reset");
-  runSimButton = createButton("Run Simulation")
+  runSimButton = createButton("Run Simulation");
+
+  setButtonStyles();
+
   field = loadImage('full.svg');
 }
 
 
 function setup() {
-  c = createCanvas(780, 780);
+  c = createCanvas(900, 900);
   background(field);
   // c.mousePressed(addPoint);
 }
@@ -47,3 +50,15 @@ function clearCanvas() {
   clear();
   background(field);
 }
+
+function setButtonStyles() {
+//   resetButton.style('float: left;')
+//   runSimButton.style('float: right;')
+  resetButton.style('background-color', color(135, 219, 255));
+  runSimButton.style('background-color', color(135, 219, 255));
+  resetButton.style('font-size: 20px;');
+  runSimButton.style('font-size: 20px;');
+  resetButton.style('font-family: "Times New Roman", Times, serif;');
+  runSimButton.style('font-family: "Times New Roman", Times, serif;');
+}
+
