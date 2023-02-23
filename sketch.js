@@ -11,7 +11,7 @@ function preload() {
   resetButton = createButton("Reset");
   runSimButton = createButton("Run Simulation");
 
-  setButtonStyles();
+  // setButtonStyles();
 
   field = loadImage('full.svg');
 }
@@ -55,8 +55,8 @@ function clearCanvas() {
 function setButtonStyles() {
 //   resetButton.style('float: left;')
 //   runSimButton.style('float: right;')
-  resetButton.style('text-align: center');
-  runSimButton.style('text-align: center');
+  // resetButton.style('text-align: center');
+  // runSimButton.style('text-align: center');
   resetButton.style('background-color', color(135, 219, 255));
   runSimButton.style('background-color', color(135, 219, 255));
   resetButton.style('font-size: 35px;');
