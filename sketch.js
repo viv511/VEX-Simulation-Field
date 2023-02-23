@@ -25,7 +25,7 @@ function setup() {
 
 function draw() {
   background(field);
-  background.style('text-align: center')
+  // background.style('text-align: center')
   c.mousePressed(addPoint);
 
   strokeWeight(7);
