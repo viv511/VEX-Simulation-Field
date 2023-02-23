@@ -18,13 +18,14 @@ function preload() {
 
 
 function setup() {
-  c = createCanvas(900, 900);
+  c = createCanvas(1000, 1000);
   background(field);
   // c.mousePressed(addPoint);
 }
 
 function draw() {
   background(field);
+  background.style('text-align: center')
   c.mousePressed(addPoint);
 
   strokeWeight(7);
@@ -54,10 +55,12 @@ function clearCanvas() {
 function setButtonStyles() {
 //   resetButton.style('float: left;')
 //   runSimButton.style('float: right;')
+  resetButton.style('text-align: center');
+  runSimButton.style('text-align: center');
   resetButton.style('background-color', color(135, 219, 255));
   runSimButton.style('background-color', color(135, 219, 255));
-  resetButton.style('font-size: 20px;');
-  runSimButton.style('font-size: 20px;');
+  resetButton.style('font-size: 35px;');
+  runSimButton.style('font-size: 35px;');
   resetButton.style('font-family: "Times New Roman", Times, serif;');
   runSimButton.style('font-family: "Times New Roman", Times, serif;');
 }
