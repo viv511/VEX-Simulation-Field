@@ -13,14 +13,13 @@ function preload() {
 
   // setButtonStyles();
 
-  field = loadImage('full.svg');
+  field = loadImage('field.png');
 }
 
 
 function setup() {
-  c = createCanvas(1000, 1000);
+  c = createCanvas(500, 500);
   background(field);
-  // c.mousePressed(addPoint);
 }
 
 function draw() {
@@ -28,14 +27,15 @@ function draw() {
   // background.style('text-align: center')
   c.mousePressed(addPoint);
 
-  strokeWeight(7);
+  strokeWeight(4);
   for(let i=0; i<xValues.length; i++) {
-    fill(0,0,0);
-    ellipse(xValues[i], yValues[i], 10);
+    fill(0, 0, 0);
+    ellipse(xValues[i], yValues[i], 5);
     line(xValues[i], yValues[i], xValues[i+1], yValues[i+1]);
   }
 
   resetButton.mouseClicked(clearCanvas);
+  listCoords();
 }
 
 function addPoint() {
@@ -53,15 +53,26 @@ function clearCanvas() {
 }
 
 function setButtonStyles() {
-//   resetButton.style('float: left;')
-//   runSimButton.style('float: right;')
-  // resetButton.style('text-align: center');
-  // runSimButton.style('text-align: center');
-  resetButton.style('background-color', color(135, 219, 255));
-  runSimButton.style('background-color', color(135, 219, 255));
+  resetButton.style('float: left;')
+  runSimButton.style('float: right;')
+  resetButton.style('text-align: center');
+  runSimButton.style('text-align: center');
+
   resetButton.style('font-size: 35px;');
   runSimButton.style('font-size: 35px;');
   resetButton.style('font-family: "Times New Roman", Times, serif;');
   runSimButton.style('font-family: "Times New Roman", Times, serif;');
 }
 
+function listCoords() {
+  let coords = "";
+  for(let i=0; i<xValues.length; i++) {
+    coords += i+1;
+    coords = coords + ": {" + xValues[i] + ", " + yValues[i] + "}\n";
+  }
+
+  if(xValues.length == 0) {
+    coords += ". . .";
+  }
+  document.getElementById("output").innerHTML = coords;
+}
